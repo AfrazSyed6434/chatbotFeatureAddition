@@ -20,9 +20,10 @@ fetch("sample.json")
       /* Add submit button */
       const button = document.createElement("button");
       button.innerHTML = "Launch";
+      var botCode = data[key]["modelCode"];
       button.onclick = () => {
         /* Redirect to body.html and pass key as parameter */
-        window.location.href = `bot_page.html?key=${key}`;
+        window.location.href = `bot_page.html?key=${botCode}`;
       };
       card.appendChild(button);
 
