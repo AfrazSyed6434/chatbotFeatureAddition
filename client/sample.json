@@ -1,0 +1,12 @@
+{
+    "bot1": {
+        "name": "Astrology Bot",
+        "inPrompt": "dfd",
+        "dailyLimit": 40
+    },
+    "bot2": {
+        "name": "Python Bot",
+        "inPrompt": "dfd",
+        "dailyLimit": 10
+    }
+}

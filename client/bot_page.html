@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodePal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBR0LBJ7ER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZBR0LBJ7ER');
+    function printDDFD() {
+            // Check if the rate limit has been exceeded
+            var rateLimit = getCookie("rate_limit");
+            if (rateLimit && rateLimit >= 5) {
+                console.log("Rate limit exceeded");
+                return;
+            }
+
+            console.log("ddfd");
+
+            // Update the rate limit cookie
+            if (!rateLimit) {
+                rateLimit = 1;
+            } else {
+                rateLimit++;
+            }
+            setCookie("rate_limit", rateLimit, 1/24);
+        }
+
+        function setCookie(cname, cvalue, expiry) {
+            var d = new Date();
+            d.setTime(d.getTime() + (expiry*60*60*1000));
+            var expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+  </script>
+
+</head>
+
+<body>
+  <div id="app">
+
+    <a onclick="printDDFD()" class="rate-test-button">Test Rate</a>
+    <a href="add_bot.html" class="admin-button">Admin</a>
+
+    <div>
+      <h2>Welcome to CodePal - your AI buddy 👋</h2>
+    </div>
+
+    <div id="chat_container"></div>
+
+    <form>
+      <textarea name="prompt" rows="1" cols="1" placeholder="Ask Codepal..."></textarea>
+      <button type="submit"><img src="assets/send.svg" alt="send" />
+    </form>
+    <footer>
+      <p>Made with passion by <a href="#">🚀Ayaz Mirza</a></p>
+    </footer>
+
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

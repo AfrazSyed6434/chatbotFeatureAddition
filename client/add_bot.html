@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodePal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="/_vercel/insights/script.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBR0LBJ7ER"></script>
+    <script src="get_bots.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZBR0LBJ7ER');
+    </script>
+
+
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .big-box {
+            width: 400px;
+            height: 100px;
+            background-color: #cccccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 75px;
+            cursor: pointer;
+        }
+
+        .big-box:hover::before {
+            content: "add bot";
+            font-size: 20px;
+            margin-top: -50px;
+            text-align: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 25px;
+
+            background-color: #f2f2f2;
+            position: relative;
+            /* added to set the position for edit button */
+
+        }
+
+        .card .edit {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px;
+            background-color: #cccccc;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .card .edit::before {
+            content: "\270E";
+            font-family: FontAwesome;
+            margin-right: 10px;
+        }
+
+        .form-container {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <a class="admin-button">Add Bot +</a>
+    <div id="app2">
+        <div class="container">
+            <!-- <div class="card"> -->
+            <!-- <button class="edit">Edit</button> -->
+        </div>
+
+    </div>
+
+    <!-- <script src="get_bots.js"></script> -->
+
+</body>
