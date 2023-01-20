@@ -2,11 +2,13 @@
     "bot1": {
         "name": "Astrology Bot",
         "inPrompt": "dfd",
-        "dailyLimit": 40
+        "dailyLimit": 40,
+        "modelCode": "text-davinci-003"
     },
     "bot2": {
         "name": "Python Bot",
         "inPrompt": "dfd",
-        "dailyLimit": 10
+        "dailyLimit": 10,
+        "modelCode": "text-davinci-003"
     }
 }
